@@ -256,17 +256,29 @@ colors:
   editorGutter.deletedBackground:  !alpha [ *RED,    80 ]                       # Editor gutter background color for lines that are deleted
 
   # Explorer Colors
-  gitDecoration.modifiedResourceForeground: *CYAN
-  gitDecoration.deletedResourceForeground: *RED
-  gitDecoration.untrackedResourceForeground: *GREEN
-  gitDecoration.ignoredResourceForeground: *COMMENT
-  gitDecoration.conflictingResourceForeground: *ORANGE
+  gitDecoration.addedResourceForeground: *GREEN                                 # Color for added resources in git decorations
+  gitDecoration.modifiedResourceForeground: *CYAN                               # Color for modified resources in git decorations
+  gitDecoration.deletedResourceForeground: *RED                                 # Color for deleted resources in git decorations
+  gitDecoration.untrackedResourceForeground: !alpha [ *GREEN, C0 ]              # Color for untracked resources in git decorations
+  gitDecoration.ignoredResourceForeground: *COMMENT                             # Color for ignored resources in git decorations
+  gitDecoration.conflictingResourceForeground: *ORANGE                          # Color for conflicting resources in git decorations
+  gitDecoration.submoduleResourceForeground: *COMMENT                           # Color for submodule resources in git decorations
 
   # Diff Editor Colors
+  diffEditor.insertedLineBackground: !alpha [ *GREEN, 20 ]                      # Background color for inserted lines
   diffEditor.insertedTextBackground: !alpha [ *GREEN, 20 ]                      # Background color for inserted text
-  diffEditor.insertedTextBorder:                                                # Outline color for inserted text
-  diffEditor.removedTextBackground: !alpha [ *RED, 50 ]                         # Background color for removed text
-  diffEditor.removedTextBorder:                                                 # Outline color for removed text
+  diffEditor.removedTextBackground: !alpha [ *RED, 40 ]                         # Background color for removed text
+  diffEditor.removedLineBackground:  !alpha [ *RED, 40 ]                        # Background color for removed lines
+  diffEditor.diagonalFill: *BGLighter                                           # Color of the diagonal fill in diff editor
+  diffEditor.unchangedRegionBackground: *BGDark                                 # Background color of unchanged region indicator in multi-diff editor
+  diffEditor.unchangedCodeBackground: !alpha [ *WHITE, 10 ]                     # Background color of unchanged code in multi-diff editor
+  diffEditor.move.border: !alpha [ *ORANGE, 60 ]                                # Border color of moved text regions
+  diffEditor.moveActive.border: *ORANGE                                         # Border color of moved text regions when active
+  diffEditorOverview.insertedForeground: !alpha [ *GREEN, 40 ]                  # Color for inserted text indicators in overview ruler
+  diffEditorOverview.removedForeground: !alpha [ *RED, 70 ]                     # Color for removed text indicators in overview ruler
+  multiDiffEditor.headerBackground: *BGLight                                    # Background color of headers in multi-diff editor
+
+  # Inline Chat Colors
   inlineChat.regionHighlight: *BGLight                                          # Background color for the inline chat diff region
 
   # Editor Widget Colors
